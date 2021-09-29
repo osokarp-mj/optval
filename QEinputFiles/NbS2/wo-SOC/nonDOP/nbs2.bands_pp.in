@@ -1,0 +1,5 @@
+&bands
+    prefix='NbS2'
+    outdir='./Output'
+    filband='nbs2.bands.dat'
+/

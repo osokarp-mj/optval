@@ -1,0 +1,7 @@
+&inputpp
+    prefix='NbS2'
+    outdir='./Output'
+    pseudo_dir='./'
+    ascii = .true.
+    single_file = .true.
+/

@@ -1,0 +1,54 @@
+&control
+    calculation='vc-relax'
+    prefix='NbS2'
+    outdir='./Output'
+    pseudo_dir='./'
+    tstress = .true.
+    tprnfor = .true.
+    etot_conv_thr = 1.0D-6
+    forc_conv_thr = 1.0D-5
+    verbosity = 'high'
+    nstep = 200
+/
+&system
+    ibrav = 0
+    celldm(1) = 6.34
+    celldm(3) = 6
+    nat = 3, ntyp = 2,
+    ecutwfc = 60.0
+    ecutrho = 500.0
+    occupations = 'smearing'
+    degauss = 0.01
+    smearing = 'mp'
+    input_dft = 'PBE'
+    nbnd = 19
+    tot_charge = -0.7
+/
+&electrons
+    conv_thr = 1.0d-8,
+    mixing_beta = 0.7,
+/
+&ions
+    ion_dynamics='bfgs'
+/
+&cell
+    cell_dynamics='bfgs'
+    cell_dofree='2Dxy'
+/
+
+ATOMIC_SPECIES
+ Nb 92.906 Nb_ONCV_PBE-1.2.upf
+ S  32.065 S_ONCV_PBE-1.2.upf
+
+CELL_PARAMETERS (alat)
+   1.019703188   0.000000000  -0.000000000
+  -0.509851594   0.883088865   0.000000000
+   0.000000000  -0.000000000   3.029330552
+
+ATOMIC_POSITIONS (crystal)
+S             0.3333333330        0.6666666660        0.6573843129
+Nb            0.6666666660        0.3333333330        0.5000000000
+S             0.3333333330        0.6666666660        0.3426156871
+
+K_POINTS (automatic)
+10 10 1 0 0 0

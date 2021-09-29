@@ -1,0 +1,9 @@
+&inputdvec
+	sorb = .FALSE.
+	circular_pol = .TRUE.
+	nonpol = .FALSE.
+	plot_matele_opt = .TRUE.
+	input_pw_export = './Output/NbS2.export/index.xml'
+	valence_band = 13
+	conduction_band = 14
+/
